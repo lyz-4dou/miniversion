@@ -1,0 +1,24 @@
+server:
+  port: 8001
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      filters: stat,wall
+      initial-size: 5
+      max-active: 30
+      max-pool-prepared-statement-per-connection-size: 50
+      max-wait: 60000
+      min-evictable-idle-time-millis: 300000
+      min-idle: 5
+      password: taobao123
+      pool-prepared-statements: true
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 60000
+      url: jdbc:mysql://localhost:3306/taobao?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+      use-global-data-source-stat: true
+      username: taobao
+      validation-query: SELECT 1 FROM DUAL
